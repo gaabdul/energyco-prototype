@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Bill Explainer",
+    "score": 85,
+    "description": "AI-powered analysis of energy bills to help customers understand their usage patterns and costs",
+    "category": "analytics"
+  },
+  {
+    "name": "Savings Coach",
+    "score": 92,
+    "description": "Personalized recommendations to reduce energy costs through behavioral changes and efficiency tips",
+    "category": "optimization"
+  },
+  {
+    "name": "Offer Matchmaker",
+    "score": 78,
+    "description": "Intelligent matching of customers with the best energy plans based on their usage patterns and preferences",
+    "category": "matching"
+  },
+  {
+    "name": "Smart Tiering",
+    "score": 88,
+    "description": "Dynamic tier optimization to help customers stay in the most cost-effective usage tiers",
+    "category": "optimization"
+  }
+]

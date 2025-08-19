@@ -1,0 +1,13 @@
+{
+  "prev_kwh": 850,
+  "curr_kwh": 920,
+  "prev_rate": 0.12,
+  "curr_rate": 0.14,
+  "days_prev": 30,
+  "days_curr": 31,
+  "weather_idx_prev": 0.8,
+  "weather_idx_curr": 0.9,
+  "plan_type": "variable",
+  "tenure_months": 18,
+  "digital_activity_score": 75
+}

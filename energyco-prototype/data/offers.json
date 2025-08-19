@@ -1,0 +1,30 @@
+[
+  {
+    "partner": "Green Energy Co",
+    "category": "renewable",
+    "persona": ["eco-conscious", "budget-savvy"],
+    "est_savings_per_month": 25,
+    "blurb": "Switch to 100% renewable energy and save on your monthly bill"
+  },
+  {
+    "partner": "Smart Power Solutions",
+    "category": "smart-home",
+    "persona": ["tech-savvy", "convenience-focused"],
+    "est_savings_per_month": 35,
+    "blurb": "Smart home integration with automated energy optimization"
+  },
+  {
+    "partner": "Budget Energy",
+    "category": "fixed-rate",
+    "persona": ["price-sensitive", "risk-averse"],
+    "est_savings_per_month": 15,
+    "blurb": "Lock in a fixed rate for predictable monthly costs"
+  },
+  {
+    "partner": "Peak Power",
+    "category": "time-of-use",
+    "persona": ["flexible-schedule", "cost-conscious"],
+    "est_savings_per_month": 40,
+    "blurb": "Save big by shifting usage to off-peak hours"
+  }
+]
