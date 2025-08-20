@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EnergyCo Prototype
 
-## Getting Started
+A Next.js app that explains electricity bill changes and helps users take action. It focuses on three core capabilities:
 
-First, run the development server:
+- Bill Explainer: breaks down why a bill changed, showing previous vs current totals, and visual deltas for usage, rate, and seasonal effects; highlights the primary driver.
+- Savings Coach: compares current plan vs recommended plan, explains projected next month cost, and offers a toggle to lock in a steadier, lower-cost option.
+- Offer Matchmaker: analyzes EV charging windows and surfaces EV-friendly plans; shows a 24‑hour rate heatmap, horizontal plan comparisons, and projected savings.
+- Budget Buddy: tracks monthly spend vs an allowance, shows progress/overspend alerts, and suggests student‑friendly plans that cap spend.
+
+## Run locally
 
 ```bash
+cd energyco-prototype
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- The server starts on an available port (e.g., http://localhost:3000 or http://localhost:3002).
+- All UI is in `src/app/page.tsx`. Global styles in `src/app/globals.css`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Data & logic
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Sample inputs: `data/bill_sample.json`
+- Rules/Concepts/Offers: `data/rules.json`, `data/concepts.json`, `data/offers.json`
+- Types: `data/types.ts`
 
-## Learn More
+Bill analysis computes:
+- previous bill = `prev_kwh * prev_rate`
+- current bill = `curr_kwh * curr_rate`
+- delta = `current - previous`
+- usage, rate, seasonal effects; these power the visual bar and summaries.
 
-To learn more about Next.js, take a look at the following resources:
+## Key UI conventions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Neutral (gray) for baselines and info; green for recommended/success; red for true negatives (spikes, over‑budget, peak windows).
+- Visuals vary per module (stacked deltas, before/after smoothing, EV heatmap, budget progress bars).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project structure
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+energyco-prototype/
+  data/                # sample data and config
+  public/              # static assets
+  src/app/             # Next.js app (routing, pages, styles)
+    globals.css
+    layout.tsx
+    page.tsx           # main prototype UI
+```
