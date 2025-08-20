@@ -408,14 +408,10 @@ export default function Home() {
                   {/* Delta line (bold) */}
                   <div className="mb-8 text-center">
                     <p className="text-xl font-bold text-gray-900">
-                      Your bill is up $26.80 this month — mostly from rate changes.
+                      Your bill is $18.40 higher this month mainly because we had the week of 90 degree weather last week so your AC used more power
                     </p>
                     <p className="text-sm text-gray-600 mt-2">
-                      {billData ? (
-                        <>Rate changes = your price per kWh increased from ${billData.prev_rate.toFixed(2)} to ${billData.curr_rate.toFixed(2)}, so the same usage costs more.</>
-                      ) : (
-                        <>Rate changes = your price per kWh increased, so the same usage costs more.</>
-                      )}
+                      Quick tip: raising your thermostat by just 2 degrees could save you around $10 next month
                     </p>
                   </div>
 
@@ -466,9 +462,7 @@ export default function Home() {
                       💰 Savings Coach keeps your bills steady
                   </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                      No more surprises. No more stress. Just <span className="font-semibold text-green-600">predictable</span>, 
-                      <span className="font-semibold text-green-600"> steady</span> bills that give you 
-                      <span className="font-semibold text-blue-600"> peace of mind</span>.
+                      Hey Maria! Based on your current usage pattern, you can save <span className="font-semibold text-green-600">$80</span> by switching to our time-of-day plan.
                   </p>
                 </div>
 
